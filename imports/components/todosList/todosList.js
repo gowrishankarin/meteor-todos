@@ -1,6 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-
+import { Meteor } from 'meteor/meteor';
 import { Tasks } from '../../api/tasks.js';
 import template from './todosList.html';
 
@@ -34,15 +34,20 @@ class TodosListCtrl {
 					checked: {
 						$ne: true
 					}
-					}).count();
-				}
+				}).count();
+			},
+			currentUser() {
+				return Meteor.user();
+			}
 		});
 	}
 
 	addTask(newTask) {
 		Tasks.insert({
 			text: newTask,
-			createdAt: new Date
+			createdAt: new Date,
+			owner: Meteor.userId(),
+			username: Meteor.user().username
 		});
 
 		this.newTask = '';

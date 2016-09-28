@@ -10,6 +10,7 @@ babel-runtime@0.1.11
 base64@1.0.9
 binary-heap@1.0.9
 blaze@2.1.9
+blaze-html-templates@1.0.5
 blaze-tools@1.0.10
 boilerplate-generator@1.0.10
 caching-compiler@1.1.7
@@ -24,6 +25,7 @@ ddp-rate-limiter@1.0.5
 ddp-server@1.2.10
 deps@1.0.12
 diff-sequence@1.0.6
+dotansimha:accounts-ui-angular@0.0.4
 ecmascript@0.5.8
 ecmascript-runtime@0.3.14
 ejson@1.0.12
@@ -83,6 +85,7 @@ templating@1.2.15
 templating-compiler@1.2.15
 templating-runtime@1.2.15
 templating-tools@1.0.5
+tmeasday:check-npm-versions@0.1.1
 tmeasday:test-reporter-helpers@0.2.1
 tracker@1.1.0
 ui@1.0.12
