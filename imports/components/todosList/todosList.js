@@ -8,7 +8,7 @@ import template from './todosList.html';
 class TodosListCtrl {
 	constructor($scope) {
 		$scope.viewModel(this);
-
+		this.subscribe('tasks');
 		this.hideCompleted = false;
 
 		this.helpers({
@@ -68,6 +68,9 @@ class TodosListCtrl {
 		// Tasks.remove(task._id);
 		Meteor.call('tasks.remove', task._id);
 	}
+  	setPrivate(task) {
+    	Meteor.call('tasks.setPrivate', task._id, !task.private);
+  	}
 }
 
 export default angular.module('todoList', [
