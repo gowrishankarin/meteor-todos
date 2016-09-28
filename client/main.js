@@ -7,7 +7,7 @@ angular.module('simple-todos', [
 	todosList.name
 ]);
 
-function noReady() {
+function onReady() {
 	angular.bootstrap(document, ['simple-todos']);
 }
 
